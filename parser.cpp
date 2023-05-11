@@ -1,35 +1,28 @@
-#include "libs.h"
+//PANAGIOTIS KONTOEIDIS
+//1115201900266
 
-using namespace std;
+#include "libs.h"
 
 tokens cmd_tokens;
 
 tokens read_command()
 {
     cmd_tokens.clear();
-
     char line[MAX_COMMAND_SIZE];
-
     char *pch;
-
     char ch;
 
     fgets(line, MAX_COMMAND_SIZE, stdin); // read the line of stdin
 
     line[strcspn(line, "\n")] = '\0'; // replace newline character with null char
-
     char *command = new char[strlen(line) + 1];
-
     strcpy(command, line);
-
     pch = strtok(command, " ");
 
     while (pch != NULL)
     {
         cmd_tokens.push_back(pch);
-
         pch = strtok(NULL, " ");
-
     } // tokenise command line
     return cmd_tokens;
 }

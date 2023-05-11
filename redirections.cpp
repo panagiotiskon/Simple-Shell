@@ -1,5 +1,7 @@
-#include "libs.h"
+//PANAGIOTIS KONTOEIDIS
+//1115201900266
 
+#include "libs.h"
 
 tokens redirections_pipes_in_cmd(tokens parameters) // tokenize down given tokens from the parameters and finds hidden >,<, | chars
 {

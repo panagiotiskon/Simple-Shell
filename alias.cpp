@@ -1,3 +1,6 @@
+//PANAGIOTIS KONTOEIDIS
+//1115201900266
+
 #include "libs.h"
 
 void add_alias(tokens command)

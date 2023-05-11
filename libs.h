@@ -10,12 +10,10 @@
 #include <list>
 #include <sys/types.h>
 #include <signal.h>
-#include <unordered_map>
 
 using namespace std;
 
 #define MAX_COMMAND_SIZE 1024
-#define MAX_ARGS 10
 
 typedef std::vector<char* > tokens;
 typedef std::vector<tokens > history;

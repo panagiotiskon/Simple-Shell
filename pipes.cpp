@@ -1,3 +1,6 @@
+//PANAGIOTIS KONTOEIDIS
+//1115201900266
+
 #include "libs.h"
 
 void pipes(tokens cmd1, tokens cmd2) //opens a pipe between two commands
