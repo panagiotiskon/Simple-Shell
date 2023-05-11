@@ -87,3 +87,19 @@ tokens env_variables(tokens command)    //parses command and replaces environmen
     }
     return new_command;
 }
+
+void cd_call(tokens command)      // change working directory with command cd
+{
+    if (command.size() == 1)                // if cmd = "cd"
+    {
+        char *h = getenv("HOME");   
+        chdir(h);
+        return;
+    }
+    else                                    // if we have args
+    {
+        char *dir = command[1];
+        chdir(dir);
+        return;
+    }
+}

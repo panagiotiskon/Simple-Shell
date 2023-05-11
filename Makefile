@@ -12,8 +12,8 @@ NAME        := mysh
 # CC        compiler
 # CFLAGS    compiler flags
 
-SRCS        := shell.cpp  parser.cpp history.cpp redirections.cpp pipes.cpp signal_handler.cpp alias.cpp
-OBJS        := shell.o  parser.o history.o redirections.o pipes.o signal_handler.o alias.o
+SRCS        := shell.cpp  parser.cpp history.cpp redirections.cpp pipes.cpp alias.cpp
+OBJS        := shell.o  parser.o history.o redirections.o pipes.o alias.o
 
 CC          := g++
 CFLAGS      := -Wall -Wextra -Werror

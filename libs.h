@@ -58,3 +58,4 @@ void print_alias();
 tokens check_for_aliases(tokens command);
 
 tokens env_variables(tokens command);    //parses command and replaces environment variables
+void cd_call(tokens command);
