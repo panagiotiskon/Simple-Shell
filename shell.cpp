@@ -39,14 +39,14 @@ int main()
             return 1;
         }
 
+        command = redirections_pipes_in_cmd(command); // parse command and correct vector if there are redirections
+
+        command = env_variables(command);
+
         if (!alias_table.empty()) // if we have stored aliases
         {
             command = check_for_aliases(command); // parse for aliases and replace them in the command vector;
         }
-
-        command = redirections_pipes_in_cmd(command); // parse command and correct vector if there are redirections
-
-        command = env_variables(command);
 
         int size = command.size();
 
@@ -150,8 +150,6 @@ int main()
             }
             if (pipe_flag == 0) // if we have no pipes
             {
-                cout << parameters[0] << endl;
-
                 if (execvp(parameters[0], parameters) == -1)
                 {
                     cerr << "Command not found" << endl;

@@ -93,13 +93,19 @@ void cd_call(tokens command)      // change working directory with command cd
     if (command.size() == 1)                // if cmd = "cd"
     {
         char *h = getenv("HOME");   
-        chdir(h);
+        if(chdir(h)==-1){
+            cout<<"error chdir"<<endl;
+            exit(-1);
+        }
         return;
     }
     else                                    // if we have args
     {
         char *dir = command[1];
-        chdir(dir);
+        if(chdir(dir)==-1){
+            cout<<"error chdir"<<endl;
+            exit(-1);
+        }
         return;
     }
 }

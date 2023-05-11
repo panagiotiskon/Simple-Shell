@@ -16,7 +16,6 @@ tokens redirections_pipes_in_cmd(tokens parameters) // tokenize down given token
     for (int i = 0; i < parameters.size(); i++)
     {
         temp.clear();
-
         flag = 0;
         
         if (strcmp(parameters[i], ">") == 0 || strcmp(parameters[i], "<") == 0 || strcmp(parameters[i], ">>") == 0 || strcmp(parameters[i], "|")==0)
@@ -103,7 +102,7 @@ tokens redirections_pipes_in_cmd(tokens parameters) // tokenize down given token
     return new_parameters;
 }
 
-void call_for_redirection(tokens command)
+void call_for_redirection(tokens command)   // call for redirections
 {
     for (int i = 0; i < command.size(); i++)
     {
@@ -129,52 +128,52 @@ void call_for_redirection(tokens command)
     }
 }
 
-void output_redirection(const char *output_file)
+void output_redirection(const char *output_file)  // >
 {
     int fd = open(output_file, O_CREAT | O_WRONLY, 0666);
     if (fd == -1)
     {
-        perror("error with open");
+        cout<<"error with open"<<endl;
         exit(-1);
     }
     if (dup2(fd, STDOUT_FILENO) == -1)
     {
-        perror("error with dup2");
+        cout<<"error with dup2"<<endl;
         exit(-1);
     }
 
     close(fd);
 }
 
-void input_redirection(const char *output_file)
+void input_redirection(const char *output_file)    // <
 {
     int fd = open(output_file, O_RDONLY);
     if (fd == -1)
     {
-        perror("error with open");
+        cout<<"error with open"<<endl;
         exit(-1);
     }
 
     if (dup2(fd, STDIN_FILENO) == -1)
     {
-        perror("error with dup2");
+        cout<<"error with dup2"<<endl;
         exit(-1);
     }
 
     close(fd);
 }
 
-void append_redirection(const char *output_file)
+void append_redirection(const char *output_file)  // >>
 {
     int fd = open(output_file, O_CREAT | O_WRONLY | O_APPEND, 0666);
     if (fd == -1)
     {
-        perror("error with open");
+        cout<<"error with open"<<endl;
         exit(-1);
     }
     if (dup2(fd, STDOUT_FILENO) == -1)
     {
-        perror("error with dup2");
+        cout<<"error with dup2"<<endl;
         exit(-1);
     }
 

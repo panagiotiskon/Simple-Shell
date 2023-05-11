@@ -10,7 +10,7 @@ void print_history(history myhistory)
 
     for (int i = 0; i < myhistory.size(); i++)
     {
-        cout << i + 1 << " ";
+        cout << i + 1 << ".  ";
         for (int j = 0; j < myhistory[i].size(); j++)
         {
             cout << myhistory[i][j] << " ";
@@ -23,7 +23,6 @@ void print_history(history myhistory)
 tokens history_command(history myhistory, tokens command)
 {
     history_flag = 0;
-    cout<<command.size()<<" h istory size "<<endl;
     if (command.size() == 1)   // if the command is myHistory
     {
         print_history(myhistory);
