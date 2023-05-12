@@ -1,3 +1,6 @@
+//PANAGIOTIS KONTOEIDIS
+//1115201900266
+
 #include "stdio.h"
 #include "string.h"
 #include "stdlib.h"

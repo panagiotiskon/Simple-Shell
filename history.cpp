@@ -6,7 +6,7 @@
 void print_history(history myhistory)         
 {
     if(myhistory.empty()){
-        cout<<"0"<<endl;
+        cout<<"History is empty"<<endl;
         return;
     }
 

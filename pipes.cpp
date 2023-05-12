@@ -14,6 +14,7 @@ void pipes(tokens cmd1, tokens cmd2) //opens a pipe between two commands
 
     char **par1 = new char *[s1 + 1];
     char **par2 = new char *[s2 + 1];
+    
     for (int i = 0; i < s1; i++)
     { // cmd 1
         par1[i] = cmd1[i];
