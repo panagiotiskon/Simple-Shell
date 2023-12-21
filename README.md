@@ -1,4 +1,4 @@
-# Simple-Shell
+# 🐚 Simple-Shell
 Implementation of shell 
 Εαρινό Εξάμηνο 2023
 
