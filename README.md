@@ -1,21 +1,6 @@
 # Simple-Shell
 Implementation of shell 
-Κ24: Προγραμματισμός Συστήματος - 1η Εργασία
 Εαρινό Εξάμηνο 2023
-
-Το tar.gz αρχείο περιλαμβάνει τα εξής αρχεία:
-
-
-* Makefile
-* libs.h
-* shell.cpp
-* parser.cpp
-* redirections.cpp
-* pipes.cpp
-* alias.cpp
-* history.cpp
-* syspro2023_hw1_completion_report_1900266.docx
-
 
 ##  Για την εκτέλεση του κελύφους καλούνται οι εντολες:
 
